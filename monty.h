@@ -46,5 +46,6 @@ void p_error(int count);
 void pint(stack_t **head, __attribute__ ((unused)) unsigned int n);
 void pop(stack_t **head, __attribute__ ((unused)) unsigned int n);
 void swap(stack_t **head, __attribute__ ((unused)) unsigned int n);
+void add(stack_t **head, __attribute__ ((unused)) unsigned int n);
 
 #endif

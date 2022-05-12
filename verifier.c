@@ -18,9 +18,10 @@ int verifier(char *arg1, char *arg2)
 		"pall",
 		"pint",
 		"pop",
-		"swap"};
+		"swap",
+		"add"};
 
-	for (idx = 0; idx < 5; idx++)
+	for (idx = 0; idx < 6; idx++)
 	{
 		if (strcmp(arg1, array[idx]) == 0)
 		{
