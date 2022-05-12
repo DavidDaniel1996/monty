@@ -1,13 +1,15 @@
 #include "monty.h"
 
 /**
- * free_list - frees list
+ * exit_prep - frees list
  * @head: pointer to head node
+ * @line: file line
+ * @stream: file descriptor
  *
  * Return: void
  */
 
-void free_list(stack_t *head)
+void exit_prep(stack_t *head, char *line, FILE *stream)
 {
 	stack_t *tmp;
 
@@ -17,4 +19,7 @@ void free_list(stack_t *head)
 		free(head);
 		head = tmp;
 	}
+
+	free(line);
+	fclose(stream);
 }

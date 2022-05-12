@@ -36,25 +36,18 @@ int main(int argc, char **argv)
 		if (val == -1)
 		{
 			fprintf(stderr, "L<%d>: usage: push integer\n", count);
-			free(line);
-			free_list(head);
-			fclose(stream);
+			exit_prep(head, line, stream);
 			exit(EXIT_FAILURE);
 		}
 		if (val == -2)
 		{
 			fprintf(stderr, "L<%d>: unknown instruction <opcode>\n", count);
-			free(line);
-			free_list(head);
-			fclose(stream);
+			exit_prep(head, line, stream);
 			exit(EXIT_FAILURE);
 		}
 		head = diverter(head, arg1, val);
 		count++;
 	}
-
-	free(line);
-	free_list(head);
-	fclose(stream);
+	exit_prep(head, line, stream);
 	exit(EXIT_SUCCESS);
 }

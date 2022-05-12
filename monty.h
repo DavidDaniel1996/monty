@@ -41,6 +41,6 @@ void push(stack_t **head, unsigned int n);
 void pall(stack_t **head, __attribute__((unused)) unsigned int n);
 stack_t *diverter(stack_t *head, char *arg1, int arg2);
 int verifier(char *arg1, char *arg2);
-void free_list(stack_t *head);
+void exit_prep(stack_t *head, char *line, FILE *stream);
 
 #endif
