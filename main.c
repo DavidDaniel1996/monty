@@ -19,8 +19,8 @@ int main (int argc, char **argv)
     }
     while ((nread = getline(&line, &len, stream)) != -1) 
     {
-            arg1 = strtok(line, " ");
-            arg2 = strtok(NULL, " ");
+            arg1 = strtok(line, " \n");
+            arg2 = strtok(NULL, " \n");
             if (arg2 != NULL)
             {
                 val = atoi(arg2);
