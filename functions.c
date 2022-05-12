@@ -11,12 +11,12 @@
 void push(stack_t **head, unsigned int n)
 {
 	stack_t *new;
+	extern int val;
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit_prep(*head, NULL, NULL);
+		val = -3;
 		exit(EXIT_FAILURE);
 	}
 

@@ -8,6 +8,7 @@
  * Return: exit success or exit failure
  */
 
+int val = 0;
 int main(int argc, char **argv)
 {
 	FILE *stream;
@@ -15,7 +16,7 @@ int main(int argc, char **argv)
 	size_t len = 0;
 	ssize_t nread;
 	stack_t *head = NULL;
-	int val, count = 1;
+	int count = 1;
 
 	if (argc != 2)
 	{
@@ -33,19 +34,19 @@ int main(int argc, char **argv)
 		arg1 = strtok(line, " \n");
 		arg2 = strtok(NULL, " \n");
 		val = verifier(arg1, arg2);
-		if (val == -1)
+		if (val < 0)
 		{
-			fprintf(stderr, "L<%d>: usage: push integer\n", count);
-			exit_prep(head, line, stream);
-			exit(EXIT_FAILURE);
-		}
-		if (val == -2)
-		{
-			fprintf(stderr, "L<%d>: unknown instruction <opcode>\n", count);
+			p_error(count);
 			exit_prep(head, line, stream);
 			exit(EXIT_FAILURE);
 		}
 		head = diverter(head, arg1, val);
+		if (val < 0)
+		{
+			p_error(count);
+			exit_prep(head, line, stream);
+			exit(EXIT_FAILURE);
+		}
 		count++;
 	}
 	exit_prep(head, line, stream);

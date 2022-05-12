@@ -42,5 +42,6 @@ void pall(stack_t **head, __attribute__((unused)) unsigned int n);
 stack_t *diverter(stack_t *head, char *arg1, int arg2);
 int verifier(char *arg1, char *arg2);
 void exit_prep(stack_t *head, char *line, FILE *stream);
+void p_error(int count);
 
 #endif

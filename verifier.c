@@ -11,7 +11,7 @@
 int verifier(char *arg1, char *arg2)
 {
 	int idx;
-	int val;
+	int value;
 	char buffer[100];
 	char *array[] = {
 		"push",
@@ -23,11 +23,11 @@ int verifier(char *arg1, char *arg2)
 		{
 			if (strcmp(arg1, "push") == 0)
 			{
-				val = atoi(arg2);
-				sprintf(buffer, "%d", val);
+				value = atoi(arg2);
+				sprintf(buffer, "%d", value);
 				if (strcmp(buffer, arg2) == 0)
 				{
-					return (val);
+					return (value);
 				}
 				else
 				{
