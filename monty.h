@@ -44,5 +44,6 @@ int verifier(char *arg1, char *arg2);
 void exit_prep(stack_t *head, char *line, FILE *stream);
 void p_error(int count);
 void pint(stack_t **head, __attribute__ ((unused)) unsigned int n);
+void pop(stack_t **head, __attribute__ ((unused)) unsigned int n);
 
 #endif

@@ -19,4 +19,6 @@ void p_error(int count)
 		fprintf(stderr, "Error: malloc failed\n");
 	if (val == -4)
 		fprintf(stderr, "L<%d>: can't pint, stack empty\n", count);
+	if (val == -5)
+		fprintf(stderr, "L<%d>: can't pop an empty stack\n", count);
 }
