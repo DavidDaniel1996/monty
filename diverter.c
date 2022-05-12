@@ -17,9 +17,10 @@ stack_t *diverter(stack_t *head, char *arg1, int arg2)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
 	};
 
-	for (idx = 0; idx < 4; idx++)
+	for (idx = 0; idx < 5; idx++)
 	{
 		if (strcmp(arg1, diverter[idx].opcode) == 0)
 		{
