@@ -105,6 +105,9 @@ void pop(stack_t **head, __attribute__ ((unused)) unsigned int n)
 	{
 		*head = (*head)->next;
 		free(tmp);
-		(*head)->prev = NULL;
+		if (*head != NULL)
+		{
+			(*head)->prev = NULL;
+		}
 	}
 }
