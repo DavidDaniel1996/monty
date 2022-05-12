@@ -7,7 +7,9 @@ void push(stack_t **head, unsigned int n)
     new = malloc(sizeof(stack_t));
     if (new == NULL)
     {
-        /*return (NULL);*/
+        fprintf(stderr, "Error: malloc failed\n");
+        free_list(*head);
+        exit (EXIT_FAILURE);
     }
 
     new->n = n;

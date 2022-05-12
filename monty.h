@@ -32,6 +32,7 @@ typedef struct instruction_s
 } instruction_t;
 
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stddef.h>
@@ -39,5 +40,7 @@ typedef struct instruction_s
 void push(stack_t **head, unsigned int n);
 void pall(stack_t **head, __attribute__((unused)) unsigned int n);
 stack_t *diverter(stack_t *head, char *arg1, int arg2);
+int verifier(char *arg1, char *arg2);
+void free_list(stack_t *head);
 
 #endif 
