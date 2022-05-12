@@ -28,6 +28,10 @@ int verifier(char *arg1, char *arg2)
 		{
 			if (strcmp(arg1, "push") == 0)
 			{
+				if (arg2 == NULL)
+				{
+					return (-1);
+				}
 				value = atoi(arg2);
 				sprintf(buffer, "%d", value);
 				if (strcmp(buffer, arg2) == 0)
