@@ -15,16 +15,15 @@ stack_t *diverter(stack_t *head, char *arg1, int arg2)
 	instruction_t diverter[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 	};
 
-	for (idx = 0; idx < 2; idx++)
+	for (idx = 0; idx < 3; idx++)
 	{
 		if (strcmp(arg1, diverter[idx].opcode) == 0)
 		{
 			diverter[idx].f(&head, arg2);
 		}
 	}
-
 	return (head);
-
 }

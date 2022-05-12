@@ -60,3 +60,26 @@ void pall(stack_t **head, __attribute__((unused)) unsigned int n)
 		tmp = tmp->next;
 	}
 }
+
+/**
+ * pint - prints value of first node
+ * @head: points to head node
+ * @n: unused
+ *
+ * Return: void
+ */
+
+void pint(stack_t **head, __attribute__ ((unused)) unsigned int n)
+{
+	extern int val;
+
+	if (*head == NULL)
+	{
+		val = -4;
+	}
+	else
+	{
+		printf("%d\n", (*head)->n);
+	}
+
+}
