@@ -56,3 +56,17 @@ void add(stack_t **head, __attribute__ ((unused)) unsigned int n)
 		(*head)->n = sum;
 	}
 }
+
+/**
+ * nop - does nothing
+ * @head: void
+ * @n: void
+ *
+ * Return: void
+ */
+
+void nop(stack_t **head, unsigned int n)
+{
+	(void)head;
+	(void)n;
+}
